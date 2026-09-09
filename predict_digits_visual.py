@@ -6,18 +6,6 @@ from PIL import Image
 import matplotlib.pyplot as plt
 from tensorflow.keras import models
 
-# =========================================================
-# 사용법
-# =========================================================
-# 1) mnist_cnn.py를 한 번 이상 실행해서 'mnist_cnn_model.keras'가
-#    생성되어 있어야 합니다.
-# 2) 예측하고 싶은 손글씨 이미지를 PREDICT_DIR 폴더에 넣습니다.
-# 3) 이 스크립트를 실행하면
-#    - 각 이미지마다 "원본 이미지 + 숫자별 확률 막대그래프"를 화면에 띄우고
-#    - result_visuals 폴더에 결과 이미지를 png로 저장하고
-#    - 콘솔에 전체 확률 표를 출력합니다.
-# =========================================================
-
 plt.rcParams['font.family'] = 'Malgun Gothic'   # 한글 폰트 깨짐 해결
 plt.rcParams['axes.unicode_minus'] = False
 
@@ -121,5 +109,5 @@ def main():
         show_and_save(filename, binary_img, probabilities)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
